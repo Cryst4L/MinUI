@@ -1,0 +1,1 @@
+/usr/bin/c++  -O2 -s -Wall -pthread  -rdynamic CMakeFiles/Example.dir/Example/main.cpp.o  -o Example  libMinUI.a -lX11 

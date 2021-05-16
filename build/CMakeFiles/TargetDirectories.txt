@@ -1,0 +1,4 @@
+/home/cryst4l/Desktop/MinUI/v-3.5/build/CMakeFiles/edit_cache.dir
+/home/cryst4l/Desktop/MinUI/v-3.5/build/CMakeFiles/rebuild_cache.dir
+/home/cryst4l/Desktop/MinUI/v-3.5/build/CMakeFiles/Example.dir
+/home/cryst4l/Desktop/MinUI/v-3.5/build/CMakeFiles/MinUI.dir

@@ -1,0 +1,9 @@
+ - Implement a sanity check of the Canva tree
+ - Implement a boundary check when the widget are placed
+ - Fix the Image widget memory management
+ - Fix the logic flow so that we return from the main
+ - Implement a depth attribute
+ - Enhance the error handling
+ - Reduce the canvas padding and the widgets sizes
+ - Support Numpad and arrow keys
+ - Enable to set the range for slider and entries
