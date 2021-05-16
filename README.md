@@ -20,7 +20,9 @@ Every widget is declared with an 'id', which is used to retreive the widget from
 
 The widget memory management is automated and opaque.
 
-To reduce the size of magic numbers, all the positions are given relatively to a grid. The grid size being a global constant which is used in the drarwing primitives.
+To reduce the size of magic numbers, all the positions are given relatively to a grid. 
+
+The size of the grid is a global constant.
 
 *More details incoming*
 
