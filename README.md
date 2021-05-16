@@ -10,7 +10,7 @@ MinUI aims to be easy to use, light-weight and low-dependency, as well as propos
   <img src="https://github.com/Cryst4L/MinUI/blob/master/demo.gif"/>
 </p>
 
-##How it works
+## How it works
 
 In MinUI every widget belongs to a canva, which is a widget storage affected to a rectangular part of the screen.
 
