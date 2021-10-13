@@ -103,5 +103,4 @@ class App
 	void close();
 };
 
-
 }

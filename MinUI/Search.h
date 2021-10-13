@@ -71,5 +71,6 @@ inline T* searchForWidget(std::string id, Canvas* root)
 	return value;
 }
 
+
 }
 

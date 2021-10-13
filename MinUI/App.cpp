@@ -284,7 +284,4 @@ void App::close()
 	m_loop = false;
 }
 
-
-
-
 }
