@@ -27,7 +27,7 @@ class MyApp : public MinUI::App
 ```
 Then the programmer will have to override the 'init()' and 'update()' methods.
 
-### Ids
+### IDs
 
 Every widget is declared with an 'id'. This 'id' is used to retrieve the widget from the canvas tree.
 
