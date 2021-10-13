@@ -33,45 +33,45 @@ class MyApp : public MinUI::App
 		setWindowSize(22, 13);
 
 		// Color
-		canva("root").addCanva("color", { 0, 0}, {9.5, 1}, "");
+		canvas("root").addCanvas("color", { 0, 0}, {9.5, 1}, "");
 
-		canva("color").addCheckBox("r", "Red",   {0, 0});
-		canva("color").addCheckBox("g", "Green", {3, 0});
-		canva("color").addCheckBox("b", "Blue",  {6, 0});
+		canvas("color").addCheckBox("r", "Red",   {0, 0});
+		canvas("color").addCheckBox("g", "Green", {3, 0});
+		canvas("color").addCheckBox("b", "Blue",  {6, 0});
 
 		// Image
-		canva("root").addImage("img", {0, 2.5}, {IMG_SIZE, IMG_SIZE}, m_surface.RGBData());
+		canvas("root").addImage("img", {0, 2.5}, {IMG_SIZE, IMG_SIZE}, m_surface.RGBData());
 
 		// Rotation
-		canva("root").addCanva("rotation", {10.5, 0}, {10.5, 3}, "Euler Angles");
+		canvas("root").addCanvas("rotation", {10.5, 0}, {10.5, 3}, "Euler Angles");
 
-		canva("rotation").addLabel("alpha", "Alpha : ", {0, 0});
-		canva("rotation").addLabel("beta" , "Beta  : ", {0, 1});
-		canva("rotation").addLabel("gamma", "Gamma : ", {0, 2});
+		canvas("rotation").addLabel("alpha", "Alpha : ", {0, 0});
+		canvas("rotation").addLabel("beta" , "Beta  : ", {0, 1});
+		canvas("rotation").addLabel("gamma", "Gamma : ", {0, 2});
 
-		canva("rotation").addSlider("alpha", {3, 0}, 3, {-M_PI, M_PI});
-		canva("rotation").addSlider("beta",  {3, 1}, 3, {-M_PI, M_PI});
-		canva("rotation").addSlider("gamma", {3, 2}, 3, {-M_PI, M_PI});
+		canvas("rotation").addSlider("alpha", {3, 0}, 3, {-M_PI, M_PI});
+		canvas("rotation").addSlider("beta",  {3, 1}, 3, {-M_PI, M_PI});
+		canvas("rotation").addSlider("gamma", {3, 2}, 3, {-M_PI, M_PI});
 
-		canva("rotation").addEntry("alpha", {7, 0}, 2, 1);
-		canva("rotation").addEntry("beta",  {7, 1}, 2, 1);
-		canva("rotation").addEntry("gamma", {7, 2}, 2, 1);
+		canvas("rotation").addEntry("alpha", {7, 0}, 2, 1);
+		canvas("rotation").addEntry("beta",  {7, 1}, 2, 1);
+		canvas("rotation").addEntry("gamma", {7, 2}, 2, 1);
 
 		// Sigmas
-		canva("root").addCanva("sigma", {10.5, 5.5}, {10.5, 2}, "Standard Deviations");
+		canvas("root").addCanvas("sigma", {10.5, 5.5}, {10.5, 2}, "Standard Deviations");
 
-		canva("sigma").addLabel("sigma_a", "Sigma A :", {0, 0});
-		canva("sigma").addLabel("sigma_b", "Sigma B :", {0, 1});
+		canvas("sigma").addLabel("sigma_a", "Sigma A :", {0, 0});
+		canvas("sigma").addLabel("sigma_b", "Sigma B :", {0, 1});
 
-		canva("sigma").addSlider("sigma_a", {3, 0}, 3, {0.2, 1.5});
-		canva("sigma").addSlider("sigma_b", {3, 1}, 3, {0.1, .75});
+		canvas("sigma").addSlider("sigma_a", {3, 0}, 3, {0.2, 1.5});
+		canvas("sigma").addSlider("sigma_b", {3, 1}, 3, {0.1, .75});
 
-		canva("sigma").addEntry("sigma_a", {7, 0}, 2, 1);
-		canva("sigma").addEntry("sigma_b", {7, 1}, 2, 1);
+		canvas("sigma").addEntry("sigma_a", {7, 0}, 2, 1);
+		canvas("sigma").addEntry("sigma_b", {7, 1}, 2, 1);
 
 		// Buttons
-		canva("root").addButton("reset", "RESET", {10.5, 10}, {5, 2});
-		canva("root").addButton("quit",  "QUIT",  {16,   10}, {5, 2});
+		canvas("root").addButton("reset", "RESET", {10.5, 10}, {5, 2});
+		canvas("root").addButton("quit",  "QUIT",  {16,   10}, {5, 2});
 
 		// Misc
 		m_first_iteration = true;
@@ -214,22 +214,22 @@ class MyApp : public MinUI::App
 
 
 /*
-		canva("root").addCanva("a", { 0, 0}, {9, 28}, "a", MinUI::Canva::MARGIN);
-		canva("root").addCanva("b", {10, 0}, {9, 28}, "b", MinUI::Canva::MARGIN);
-		canva("root").addCanva("c", {20, 0}, {9, 28}, "c", MinUI::Canva::MARGIN);
+		canvas("root").addCanvas("a", { 0, 0}, {9, 28}, "a", MinUI::Canvas::MARGIN);
+		canvas("root").addCanvas("b", {10, 0}, {9, 28}, "b", MinUI::Canvas::MARGIN);
+		canvas("root").addCanvas("c", {20, 0}, {9, 28}, "c", MinUI::Canvas::MARGIN);
 
-		//MinUI::Canva canva_a = canva("a");
+		//MinUI::Canvas canvas_a = canvas("a");
 
-		canva("a").addCanva("d", { 0,  0}, {7, 11}, "d", MinUI::Canva::MARGIN);
-		canva("a").addCanva("e", { 0, 12}, {7, 11}, "e", MinUI::Canva::MARGIN);
+		canvas("a").addCanvas("d", { 0,  0}, {7, 11}, "d", MinUI::Canvas::MARGIN);
+		canvas("a").addCanvas("e", { 0, 12}, {7, 11}, "e", MinUI::Canvas::MARGIN);
 
-		canva("c").addCanva("f", { 0,  0}, {7, 9}, "f", MinUI::Canva::MARGIN);
-		canva("c").addCanva("g", { 0,  8}, {7, 9}, "g", MinUI::Canva::MARGIN);
-		canva("c").addCanva("h", { 0, 16}, {7, 9}, "h", MinUI::Canva::MARGIN);
+		canvas("c").addCanvas("f", { 0,  0}, {7, 9}, "f", MinUI::Canvas::MARGIN);
+		canvas("c").addCanvas("g", { 0,  8}, {7, 9}, "g", MinUI::Canvas::MARGIN);
+		canvas("c").addCanvas("h", { 0, 16}, {7, 9}, "h", MinUI::Canvas::MARGIN);
 
-		canva("g").addCanva("i", { 0, 0}, {4, 4}, "i", MinUI::Canva::MARGIN);
-		canva("g").addCanva("j", { 0, 2}, {4, 4}, "j", MinUI::Canva::MARGIN);
+		canvas("g").addCanvas("i", { 0, 0}, {4, 4}, "i", MinUI::Canvas::MARGIN);
+		canvas("g").addCanvas("j", { 0, 2}, {4, 4}, "j", MinUI::Canvas::MARGIN);
 
-		canva("a").addButton("ba", "ba", {0, 0}, {3, 1});
-		canva("i").addButton("bi", "bi", {0, 0}, {3, 1});
+		canvas("a").addButton("ba", "ba", {0, 0}, {3, 1});
+		canvas("i").addButton("bi", "bi", {0, 0}, {3, 1});
 */

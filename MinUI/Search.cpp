@@ -3,16 +3,16 @@
 /*
 namespace MinUI
 {
-inline Canva* searchForCanva(std::string id, Canva* root)
+inline Canvas* searchForCanvas(std::string id, Canvas* root)
 {
 	//found = false;
-	Canva * value = nullptr;
+	Canvas * value = nullptr;
 	if (root->id() == id) {
 		value = root;
 		//found = true;
 	} else {
 		for (int i = 0; i < (int) root->childs().size(); i++) {
-			value = searchForCanva(id, &(root->childs()[i]));
+			value = searchForCanvas(id, &(root->childs()[i]));
 			if (value != nullptr) {
 				//found = true;
 				break;
@@ -23,7 +23,7 @@ inline Canva* searchForCanva(std::string id, Canva* root)
 }
 
 template <class T>
-inline T* searchForWidget(std::string id, Canva* root)
+inline T* searchForWidget(std::string id, Canvas* root)
 {
 	T * value = nullptr;
 	bool found = false;
@@ -58,7 +58,7 @@ inline T* searchForWidget(std::string id, Canva* root)
 
 ////////////////////////////////////////////////////////////////////////////////
 
-/*bool searchForCanva(std::string id, Canva& root, Canva& rvalue)
+/*bool searchForCanvas(std::string id, Canvas& root, Canvas& rvalue)
 {
 	//std::cout << root.id() << std::endl;
 	bool found = false;
@@ -69,7 +69,7 @@ inline T* searchForWidget(std::string id, Canva* root)
 		found = true;
 	} else {
 		for (int i = 0; i < root.childs().size(); i++) {
-			found |= searchForCanva(id, root.childs()[i], rvalue);
+			found |= searchForCanvas(id, root.childs()[i], rvalue);
 		}
 	}
 
@@ -79,7 +79,7 @@ inline T* searchForWidget(std::string id, Canva* root)
 
 /*
 template <class T>
-bool searchForWidget(std::string id, Canva& root, T& rvalue)
+bool searchForWidget(std::string id, Canvas& root, T& rvalue)
 {
 	bool found = false;
 

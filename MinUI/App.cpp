@@ -76,9 +76,9 @@ void App::setupFont()
 	m_font= Font(DEFAULT_FONT_PATH, FONT_SIZE, m_context);
 }
 
-void App::setUpCanva()
+void App::setUpCanvas()
 {
-	m_root_canva = Canva("root", {0, 0}, {m_size.x, m_size.y}, "", Canva::NOBORDER, 1);
+	m_root_canvas = Canvas("root", {0, 0}, {m_size.x, m_size.y}, "", Canvas::NOBORDER, 1);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -115,7 +115,7 @@ void App::setWindowSize(float width, float height)
 	m_context.buffer = XCreatePixmap(m_context.display_p, XRootWindow(m_context.display_p, screen),
 	                                 m_size.x * GRID_SIZE, m_size.y * GRID_SIZE, depth);
 
-	m_root_canva.resize(m_size.x, m_size.y);
+	m_root_canvas.resize(m_size.x, m_size.y);
 
 	banDynamicResize();
 }
@@ -127,19 +127,19 @@ void App::setWindowTitle(std::string title)
 
 ////////////////////////////////////////////////////////////////////////////////
 
-Canva& App::canva(std::string id)
+Canvas& App::canvas(std::string id)
 {
-	Canva * value = searchForCanva(id, &m_root_canva);
+	Canvas * value = searchForCanvas(id, &m_root_canvas);
 
 	if (value == nullptr)
-		std::cerr << "Canva '" << id << "' not found" << std::endl;
+		std::cerr << "Canvas '" << id << "' not found" << std::endl;
 
 	return (*value);
 }
 
 Button& App::button(std::string id)
 {
-	Button * button = searchForWidget <Button> (id, &m_root_canva);
+	Button * button = searchForWidget <Button> (id, &m_root_canvas);
 
 	if (button == nullptr)
 		std::cerr << "Button '" << id << "' not found" << std::endl;
@@ -149,7 +149,7 @@ Button& App::button(std::string id)
 
 Entry& App::entry(std::string id)
 {
-	Entry * entry = searchForWidget <Entry> (id, &m_root_canva);
+	Entry * entry = searchForWidget <Entry> (id, &m_root_canvas);
 
 	if (entry == nullptr)
 		std::cerr << "Entry '" << id << "' not found" << std::endl;
@@ -159,7 +159,7 @@ Entry& App::entry(std::string id)
 
 Slider& App::slider(std::string id)
 {
-	Slider * slider = searchForWidget <Slider> (id, &m_root_canva);
+	Slider * slider = searchForWidget <Slider> (id, &m_root_canvas);
 
 	if (slider == nullptr)
 		std::cerr << "Slider '" << id << "' not found" << std::endl;
@@ -169,7 +169,7 @@ Slider& App::slider(std::string id)
 
 TrackBar& App::trackbar(std::string id)
 {
-	TrackBar * trackbar = searchForWidget <TrackBar> (id, &m_root_canva);
+	TrackBar * trackbar = searchForWidget <TrackBar> (id, &m_root_canvas);
 
 	if (trackbar == nullptr)
 		std::cerr << "TrackBar '" << id << "' not found" << std::endl;
@@ -179,7 +179,7 @@ TrackBar& App::trackbar(std::string id)
 
 Label& App::label(std::string id)
 {
-	Label * label = searchForWidget <Label> (id, &m_root_canva);
+	Label * label = searchForWidget <Label> (id, &m_root_canvas);
 
 	if (label == nullptr)
 		std::cerr << "Label '" << id << "' not found" << std::endl;
@@ -189,7 +189,7 @@ Label& App::label(std::string id)
 
 CheckBox& App::checkbox(std::string id)
 {
-	CheckBox * checkbox = searchForWidget <CheckBox> (id, &m_root_canva);
+	CheckBox * checkbox = searchForWidget <CheckBox> (id, &m_root_canvas);
 
 	if (checkbox == nullptr)
 		std::cerr << "CheckBox '" << id << "' not found" << std::endl;
@@ -199,7 +199,7 @@ CheckBox& App::checkbox(std::string id)
 
 Image& App::image(std::string id)
 {
-	Image * image = searchForWidget <Image> (id, &m_root_canva);
+	Image * image = searchForWidget <Image> (id, &m_root_canvas);
 
 	if (image == nullptr)
 		std::cerr << "Image '" << id << "' not found" << std::endl;
@@ -213,7 +213,7 @@ void App::run()
 {
 	setupX11Window();
 	setupInputs();
-	setUpCanva();
+	setUpCanvas();
 	setupFont();
 
 	init();
@@ -233,9 +233,9 @@ void App::run()
 
 		////////////////////////////////////////////////////////////////////
 
-		m_root_canva.update(m_inputs.state());
+		m_root_canvas.update(m_inputs.state());
 
-		m_root_canva.render(m_context, m_font);
+		m_root_canvas.render(m_context, m_font);
 
 		////////////////////////////////////////////////////////////////////
 

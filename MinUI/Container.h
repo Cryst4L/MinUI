@@ -2,7 +2,7 @@
 // Container.h
 // -----------------------------------------------------------------------------
 // A container is a storage element for the widgets. 
-// Each canva holds a container fot it's affiliated widgets. 
+// Each canvas holds a container fot it's affiliated widgets. 
 // Inside a container, widgets are stored in a polymorphic fashion (that is to 
 // say using pointers of base class 'Widget').
 ////////////////////////////////////////////////////////////////////////////////
@@ -17,14 +17,14 @@
 #include "TrackBar.h"
 #include "Image.h"
 
-//#include "Canva.h"
+//#include "Canvas.h"
 
 #include <string>
 
 namespace MinUI
 {
 
-class Canva; //circular dependency
+class Canvas; //circular dependency
 
 class Container
 {

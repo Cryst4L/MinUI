@@ -14,7 +14,7 @@
 #include "Font.h"
 #include "Draw.h"
 #include "Utils.h"
-#include "Canva.h"
+#include "Canvas.h"
 #include "Timer.h"
 #include "Search.h"
 
@@ -47,7 +47,7 @@ class App
 	pthread_t  m_thread;
 	Inputs     m_inputs;
 	Font       m_font;
-	Canva      m_root_canva;
+	Canvas      m_root_canvas;
 	bool       m_loop;
 
 	void setupX11Window(std::string title = "MinUI",
@@ -55,7 +55,7 @@ class App
 
 	void setupInputs();
 	void setupFont();
-	void setUpCanva();
+	void setUpCanvas();
 	void banDynamicResize();
 
     public :
@@ -76,7 +76,7 @@ class App
 
 	////////////////////////////////////////////////////////////////////////////
 
-	Canva& canva(std::string id);
+	Canvas& canvas(std::string id);
 
 	Button& button(std::string id);
 

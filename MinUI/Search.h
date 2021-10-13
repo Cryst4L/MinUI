@@ -2,10 +2,10 @@
 // Search.h
 // -----------------------------------------------------------------------------
 // Implements the searching algorithms.
-// The canva set is structured as a tree in which each canva act as a node.
-// To retreive a canva, one must perform a search over the canva tree.
+// The canvas set is structured as a tree in which each canvas act as a node.
+// To retreive a canvas, one must perform a search over the canvas tree.
 // Similarly widgets are retreived by going over this tree and checking the 
-// canva containers content.
+// canvas containers content.
 // The search algorithms are both recursive. The widget search is implemented 
 // using a template to ensure proper polymorphism.  
 ////////////////////////////////////////////////////////////////////////////////
@@ -13,21 +13,21 @@
 #pragma once
 
 #include "Button.h"
-#include "Canva.h"
+#include "Canvas.h"
 
 namespace MinUI
 {
-inline Canva* searchForCanva(std::string id, Canva* root)
+inline Canvas* searchForCanvas(std::string id, Canvas* root)
 {
 	//found = false;
-	Canva * value = nullptr;
+	Canvas * value = nullptr;
 
 	if (root->id() == id) {
 		value = root;
 		//found = true;
 	} else {
 		for (int i = 0; i < (int) root->childs().size(); i++) {
-			value = searchForCanva(id, &(root->childs()[i]));
+			value = searchForCanvas(id, &(root->childs()[i]));
 
 			if (value != nullptr) {
 				//found = true;
@@ -40,7 +40,7 @@ inline Canva* searchForCanva(std::string id, Canva* root)
 }
 
 template <class T>
-inline T* searchForWidget(std::string id, Canva* root)
+inline T* searchForWidget(std::string id, Canvas* root)
 {
 	T * value = nullptr;
 	bool found = false;
