@@ -75,7 +75,7 @@ MinUI was developed with multithreading in mind.
 The goal was to propose an API which allows the management of multiple panels (or Apps) at the same time.
 
 Once the programmer has implemented its own App, he can either launch it using the 'run' method:
-```
+```cpp
 my_app.run();
 ```
 In that case the App will occupy the main thread and will be blocking.
