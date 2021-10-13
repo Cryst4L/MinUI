@@ -10,7 +10,7 @@ It also aims to propose an original approach to GUI design.
   <img src="https://github.com/Cryst4L/MinUI/blob/master/demo.gif"/>
 </p>
 
-##How it works
+## How it works
 
 # Apps
 
@@ -27,7 +27,7 @@ class MyApp : public MinUI::App
 ```
 Then the programmer will have to override the 'init()' and 'update()' methods.
 
-#Ids
+# Ids
 
 Every widget is declared with an 'id'. This 'id' is used to retrieve the widget from the canvas tree.
 
@@ -44,7 +44,7 @@ if (button("reset").isClicked())
 	variable = 0; 
 ```
 
-#Canvas
+# Canvas
 
 In a MinUI interface, every widget belongs to a canvas. 
 A canvas is a widget storage affected to a rectangular part of the screen.
@@ -61,7 +61,7 @@ canvas("root").addCanva("button", { 0, 0}, {9.5, 1}, "");
 ```
 This (quite obviously) also works for any other canvas.
 
-#The Grid
+# The Grid
 
 In a MinUI interface all the positions are given by constants, relatively their belonging canvas.
 This means that MinUI interfaces are not responsive, but on the other hand, it ensures that the interface will look exactly like the programmer will.
@@ -70,7 +70,7 @@ A major issue in such approaches is the management of large 'magic numbers', whi
 To address this issue every magic number is expressed according to a fixed size, just as if they were placed on a grid.
 By default the grid size is of 25 pixels. 
 
-#Threading
+# Threading
 
 MinUI was developed with multithreading in mind. 
 The goal was to propose an API which allows the management of multiple panels (or Apps) at the same time.
@@ -89,7 +89,7 @@ app.start();
 app.join();
 ```
 
-#Memory
+# Memory
 
 The widget memory management is automated and opaque. 
 There is no need to 'new' or 'delete' anything.
