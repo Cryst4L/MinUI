@@ -75,8 +75,8 @@ MinUI was developed with multithreading in mind.
 The goal was to propose an API which allows the management of multiple panels (or Apps) at the same time.
 
 Once the programmer has implemented its own App, he can either launch it using the 'run' method:
-```
-my_app.run();
+```cpp
+myapp.run();
 ```
 In that case the App will occupy the main thread and will be blocking.
 But MinUI also proposes to run the App in its own thread, letting the main thread untouched.
@@ -87,7 +87,6 @@ MyApp app;
 app.start();
 app.join();
 ```
-
 ### Memory
 
 The widget memory management is automated and opaque. 
@@ -96,7 +95,7 @@ This is a major feature of MinUI considering that it is written in C++98.
 
 ### Example
 
-There is a complete example int the corresponding folder. To build it, you want to open a terminal in the root '/MinUI' folder and write the following commands:
+There is a complete example in the corresponding folder. To build it, you want to open a terminal in the root '/MinUI' folder and write the following commands:
 
 ```sh
 mkdir build && cd build
