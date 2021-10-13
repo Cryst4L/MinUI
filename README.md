@@ -63,7 +63,7 @@ if (button("reset").isClicked())
 ### The Grid
 
 In a MinUI interface all the positions are given by constants, according to their belonging canvas.
-This means that MinUI interfaces are not responsive, but on the other hand, it ensures that the interface will look exactly like the programmer will.
+This means that MinUI interfaces are not responsive, but on the other hand, it ensures that the interface will look exactly like the programmer wants it to.
 
 A major issue in such approaches is the management of large 'magic numbers', which encode the positions and size of the widgets.
 To address this issue every magic number is expressed according to a fixed size, just as if they were placed on a grid.
