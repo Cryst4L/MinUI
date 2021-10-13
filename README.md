@@ -87,7 +87,6 @@ MyApp app;
 app.start();
 app.join();
 ```
-
 ### Memory
 
 The widget memory management is automated and opaque. 
@@ -96,7 +95,7 @@ This is a major feature of MinUI considering that it is written in C++98.
 
 ### Example
 
-There is a complete example int the corresponding folder. To build it, you want to open a terminal in the root '/MinUI' folder and write the following commands:
+There is a complete example in the corresponding folder. To build it, you want to open a terminal in the root '/MinUI' folder and write the following commands:
 
 ```sh
 mkdir build && cd build
