@@ -27,23 +27,6 @@ class MyApp : public MinUI::App
 ```
 Then the programmer will have to override the 'init()' and 'update()' methods.
 
-### Ids
-
-Every widget is declared with an 'id'. This 'id' is used to retrieve the widget from the canvas tree.
-
-In the method 'update' once can retrieve a widget, for example a button, by calling it in the following way: 
-
-```cpp
-button("my_button_id");
-```
-
-Then the programmer can act on the widget, by using the widget available methods. Here is an example:
-
-```cpp
-if (button("reset").isClicked())
-	variable = 0; 
-```
-
 ### Canvas
 
 In a MinUI interface, every widget belongs to a canvas. 
@@ -61,6 +44,22 @@ canvas("root").addCanva("button", { 0, 0}, {9.5, 1}, "");
 ```
 This (quite obviously) also works for any other canvas.
 
+### IDs
+
+Every widget is declared with an 'id'. This 'id' is used to retrieve the widget from the canvas tree.
+
+In the method 'update' once can retrieve a widget, for example a button, by calling it in the following way: 
+
+```cpp
+button("my_button_id");
+```
+
+Then the programmer can act on the widget, by using the widget available methods. Here is an example:
+
+```cpp
+if (button("reset").isClicked())
+	variable = 0; 
+```
 ### The Grid
 
 In a MinUI interface all the positions are given by constants, relatively their belonging canvas.
