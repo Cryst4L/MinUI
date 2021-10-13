@@ -12,9 +12,10 @@ Container::Container(const Container &container)
 
 Container& Container::operator=(const Container &container)
 {
-	if (this != &container) {
+	if (this != &container) 
+	{
+		//TODO: delete the widgets before calling clear
 		m_widgets.clear();
-
 		for (int i = 0; i < (int) container.m_widgets.size(); i++) {
 			//widget = new Widget(container.m_widgets[i]);
 			Widget * widget = container.m_widgets[i]->clone();
