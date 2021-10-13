@@ -94,6 +94,17 @@ The widget memory management is automated and opaque.
 There is no need to 'new' or 'delete' anything.
 This is a major feature of MinUI considering that it is written in C++98.
 
+### Example
+
+There is a complete example int the corresponding folder. To build it, you want to open a terminal in the root '/MinUI' folder and write the following commands:
+
+```sh
+mkdir build && cd build
+cmake ..
+make
+```
+The executable will be stored in the 'build' directory. 
+
 ## Copyright
 
 This project is released under MIT license.
