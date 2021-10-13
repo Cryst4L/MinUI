@@ -212,24 +212,3 @@ class MyApp : public MinUI::App
 
 };
 
-
-/*
-		canvas("root").addCanvas("a", { 0, 0}, {9, 28}, "a", MinUI::Canvas::MARGIN);
-		canvas("root").addCanvas("b", {10, 0}, {9, 28}, "b", MinUI::Canvas::MARGIN);
-		canvas("root").addCanvas("c", {20, 0}, {9, 28}, "c", MinUI::Canvas::MARGIN);
-
-		//MinUI::Canvas canvas_a = canvas("a");
-
-		canvas("a").addCanvas("d", { 0,  0}, {7, 11}, "d", MinUI::Canvas::MARGIN);
-		canvas("a").addCanvas("e", { 0, 12}, {7, 11}, "e", MinUI::Canvas::MARGIN);
-
-		canvas("c").addCanvas("f", { 0,  0}, {7, 9}, "f", MinUI::Canvas::MARGIN);
-		canvas("c").addCanvas("g", { 0,  8}, {7, 9}, "g", MinUI::Canvas::MARGIN);
-		canvas("c").addCanvas("h", { 0, 16}, {7, 9}, "h", MinUI::Canvas::MARGIN);
-
-		canvas("g").addCanvas("i", { 0, 0}, {4, 4}, "i", MinUI::Canvas::MARGIN);
-		canvas("g").addCanvas("j", { 0, 2}, {4, 4}, "j", MinUI::Canvas::MARGIN);
-
-		canvas("a").addButton("ba", "ba", {0, 0}, {3, 1});
-		canvas("i").addButton("bi", "bi", {0, 0}, {3, 1});
-*/
