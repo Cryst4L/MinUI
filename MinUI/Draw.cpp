@@ -65,7 +65,7 @@ void drawText(std::string text, const Vector2f position,
 
 	if (padded) {
 		padding.x = (int) (0.25 * (GRID_SIZE - char_w));
-		padding.y =	(int) (0.4 * (GRID_SIZE - char_h));
+		padding.y =	(int) (0.5 * (GRID_SIZE - char_h));
 	}
 
 	Vector2i offset = {(int) (padding.x + position.x * GRID_SIZE),

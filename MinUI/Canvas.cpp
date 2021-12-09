@@ -31,7 +31,7 @@ void Canvas::renderSelf(X11Context& context, Font& font)
 		dimension = add(dimension, {0., 0.5});// {0., -0.5});
 	}
 
-	drawBox(position, dimension, background, context, outline, outline);
+	drawBox(position, dimension, background, context, outline);
 
 	if (m_title != "") {
 		font.colorScheme() = m_parity ? BASE : EMPHASIS;
