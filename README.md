@@ -4,7 +4,7 @@
 
 MinUI is a minimalist X11 GUI toolkit implemented in C++98.
 It aims to be easy to use, lightweight and have no dependencies but "pthread". 
-It also aims to propose an original approach to GUI design.
+MinUI also aims to propose an original approach to GUI design.
 
 <p align="center">
   <img src="https://github.com/Cryst4L/MinUI/blob/master/demo.gif"/>
