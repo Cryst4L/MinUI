@@ -60,6 +60,8 @@ Then the programmer can act on the widget, by using the widget available methods
 if (button("reset").isClicked())
 	variable = 0; 
 ```
+Note that widgets of different types can share the same ID.
+
 ### The Grid
 
 In a MinUI interface all the positions are given by constants, according to their belonging canvas.
