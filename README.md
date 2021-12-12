@@ -83,7 +83,7 @@ myapp.run();
 In that case the App will occupy the main thread and will be blocking.
 But MinUI also proposes to run the App in its own thread, letting the main thread untouched.
 Launching an App in its own thread, is very simple. It is done using the 'start' method (instead of the 'run' one).
-In that case the programmer will also have to call the 'stop' method to close the thread. Here is a full example:
+In that case the programmer will also have to call the 'join' method to close the thread. Here is a full example:
 ```cpp
 MyApp app;
 app.start();
